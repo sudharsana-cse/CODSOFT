@@ -1,0 +1,100 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+#include<istream>
+using namespace std;
+int main()
+{
+    int Level,Easy, Medium,Hard,guessnumber;
+    cout << "WELCOME TO NUMBER GUESSING GAME" << endl;
+    cout << "You have guess a random number between 1 to 50." << endl << "you will have Limited choices based on choosing the Level."<< endl << "If your guessing number match with random number..you won!" << endl << "Good Luck!" << endl;
+    cout << "SELECT THE LEVEL" << endl;
+    cout << "1.Easy" << endl << "2.Medium " << endl << "3.Hard" << endl;
+    cin >> Level;
+    int secretnumber = 1+(rand() % 100);
+    cout << secretnumber;
+    switch(Level)
+    {
+        case 1:
+        cout << "Easy level" << endl;
+        cout << "you have 10 choices to find guessnumber" << endl;
+        break;
+        case 2:
+        cout << "Medium level" << endl;
+        cout << "you have 5 choices to find guessnumber" << endl;
+        break;
+        case 3:
+        cout << "Hard level" << endl;
+        cout << "you have 3 choices to find guessnumber" << endl;
+        break;
+        return 0;
+    }
+    
+    if(Level==1)
+    {
+        for (int i = 0; i < 10; i++)
+        {
+            cout << "Enter your guessnumber:" << endl;
+            cin >> guessnumber;
+            
+            if(guessnumber==secretnumber)
+            cout << "The guessnumber is matched successfully .you won!" << endl;
+            
+            else if((i==9) && (guessnumber!=secretnumber))
+            cout << "Your choices are over. You lose!!" << endl;
+            
+            else{
+                if(guessnumber<secretnumber)
+                cout << "The guessnumber is too low" << endl;
+                else if(guessnumber>secretnumber)
+                cout << "The guessnumber is too high" << endl;
+            }    
+        
+        }
+    }
+    if(Level==2)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            cout << "Enter your guessnumber:" << endl;
+            cin >> guessnumber;
+            
+            if(guessnumber==secretnumber)
+            cout << "The guessnumber is matched successfully .you won!" << endl;
+            
+            else if((i==4) && (guessnumber!=secretnumber))
+            cout << "Your choices are over. You lose!!" << endl;
+            
+            else{
+                if(guessnumber<secretnumber)
+                cout << "The guessnumber is too low" << endl;
+                else if(guessnumber>secretnumber)
+                cout << "The guessnumber is too high" << endl;
+            }    
+        
+        }
+    }
+    
+    if(Level==3)
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            cout << "Enter your guessnumber:" << endl;
+            cin >> guessnumber;
+            
+            if(guessnumber==secretnumber)
+            cout << "The guessnumber is matched successfully .you won!" << endl;
+            
+            else if((i==2) && (guessnumber!=secretnumber))
+            cout << "Your choices are over. You lose!!" << endl;
+            
+            else{
+                if(guessnumber<secretnumber)
+                cout << "The guessnumber is too low" << endl;
+                else if(guessnumber>secretnumber)
+                cout << "The guessnumber is too high" << endl;
+            }    
+        
+        }
+    }
+}
